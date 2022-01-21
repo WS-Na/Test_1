@@ -8,6 +8,51 @@ public class Hero {
     int attack;
     float hp;
     AtomicInteger hhp = new AtomicInteger();
+    static String copyright ;
+
+    public static String getCopyright() {
+        return copyright;
+    }
+
+    public static void setCopyright(String copyright) {
+    }
+
+    public AtomicInteger getHhp() {
+        return hhp;
+    }
+
+    public void setHhp(AtomicInteger hhp) {
+        this.hhp = hhp;
+    }
+
+    public float getHp() {
+        return hp;
+    }
+
+    public void setHp(float hp) {
+        this.hp = hp;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    static {
+        System.out.println("初始化 copyright");
+        copyright = "版权由value公司所有";
+    }
 
     public Hero() {
     }
@@ -101,5 +146,4 @@ public class Hero {
     public void hurtx() {
         hhp.decrementAndGet();
     }
-
 }
